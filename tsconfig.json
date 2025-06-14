@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./build",
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["config/*"], // Added "" prefix
+      "@controllers/*": ["controllers/*"], // Added "" prefix
+      "@middlewares/*": ["middlewares/*"], // Added "" prefix
+      "@routes/*": ["routes/*"], // Added "" prefix
+      "@types/*": ["types/*"], // Added "" prefix
+      "@utils/*": ["utils/*"], // Added "" prefix
+      "@models/*": ["models/*"] // Added "" prefix
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "**/*.ts", // Include all TypeScript files in the "src" directory and subdirectories
+    "**/*.d.ts" // Include any declaration files
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules
+    "test/**/*",      // Exclude test files (adjust if your test directory is different)
+    "dist/**/*"      // Exclude distribution/build artifacts (if you have a separate dist folder)
+  ]
+}
